@@ -174,9 +174,9 @@ module Zeus
       ::Rails.env = ENV['RAILS_ENV'] = 'test'
       require APP_PATH
 
-      $rails_rake_task = 'yup' # lie to skip eager loading
+      # $rails_rake_task = 'yup' # lie to skip eager loading
       ::Rails.application.require_environment!
-      $rails_rake_task = nil
+      # $rails_rake_task = nil
 
       $LOAD_PATH.unshift ".", "./lib", "./test", "./spec"
     end
